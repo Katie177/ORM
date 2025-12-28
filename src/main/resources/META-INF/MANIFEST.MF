@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Spring-Boot-Version: 3.4.0
+Implementation-Title: educationplatform
+Implementation-Version: 1.0.0
+Built-By: antonavramov
+Build-Jdk: 17.0.1
+Created-By: Apache Maven 3.9.6
+Implementation-Vendor-Id: com.educationplatform

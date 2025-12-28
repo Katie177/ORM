@@ -1,0 +1,18 @@
+{{- $fullName := include "educationplatform.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "educationplatform.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ $svcPort }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "educationplatform.selectorLabels" . | nindent 4 }}
